@@ -1,0 +1,659 @@
+@import url(http://fonts.googleapis.com/css?family=Laila:400,700);
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font-family: Arial, Tahoma, sans-serif;
+ 
+}
+
+.remove {
+  max-width: 40px;
+  float: right;
+  cursor: pointer;
+}
+
+.dropshipformwrap {
+  width: 100%;
+  margin-left: 0;
+}
+
+br {
+  display: block;
+  line-height: 1.6em;
+}
+
+input,
+textarea {
+  -webkit-font-smoothing: antialiased;
+  outline: none;
+}
+
+strong,
+b {
+  font-weight: bold;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+h1 {
+  display: block;
+  font-size: 3.1em;
+  line-height: 1.45em;
+  font-family: 'Laila', serif;
+  text-align: center;
+  font-weight: bold;
+  color: #555;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+@media (max-width: 500px) {
+    
+  h1{
+    font-size: 2em;
+  }
+  .radio_btn {
+    margin: 0 1.5rem;
+}
+
+form > div > label {
+     padding: 20px 20px 10px; 
+    
+}
+}
+
+
+/** form field **/
+
+form {
+  display: block;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #e4e4e4;
+  border-radius: 5px;
+  font-size: 0;
+}
+
+form > div > label {
+  display: block;
+  padding: 20px 20px 10px;
+  vertical-align: top;
+  font-size: 15px;
+  font-weight: bold;
+  color: #939393;
+  cursor: pointer;
+  vertical-align: text-top;
+}
+
+form > div.switch > label {
+  padding: 16px 20px 14px;
+}
+
+.col-1 .col-2,
+.col-3,
+.col-4 {
+  border-bottom: 1px solid #e4e4e4;
+  padding-top: 10px;
+}
+
+.col-1 {
+  border-top: 1px solid #e4e4e4;
+}
+
+form > div > .col-4 {
+  height: 86px;
+}
+
+label > input {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  line-height: 27px;
+  margin: 5px -5px 0;
+  padding: 7px 5px 3px;
+  border: none;
+  outline: none;
+  color: #555;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  opacity: .6;
+  transition: all linear .3s;
+}
+
+.col-submit {
+  text-align: center;
+  padding: 20px;
+}
+
+label > select {
+  display: block;
+  width: 100%;
+  padding: 0;
+  color: #555;
+  margin: 16px 0 6px;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  opacity: .4;
+  transition: all linear .3s;
+}
+
+label > input:focus,
+label > select:focus {
+  opacity: 1;
+}
+
+
+/** button design based on http://codepen.io/guvootes/pen/eyDAb **/
+
+.fileUpload {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  width: 40%;
+}
+
+.fileUpload input.upload {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.add{
+  background: black;
+    height: 30px;
+    width: 30px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 23px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+  width: 40%;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  outline: none;
+  
+}
+
+button.submitbtn
+{
+  background-image: -moz-linear-gradient(#97c16b, #8ab959);
+  background-image: -webkit-linear-gradient(#97c16b, #8ab959);
+  background-image: linear-gradient(#97c16b, #8ab959);
+  border-bottom: 1px solid #648c3a;
+  cursor: pointer;
+  color: #fff;
+}
+
+button.submitbtn:hover {
+  background-image: -moz-linear-gradient(#8ab959, #7eaf4a);
+  background-image: -webkit-linear-gradient(#8ab959, #7eaf4a);
+  background-image: linear-gradient(#8ab959, #7eaf4a);
+}
+
+button.submitbtn:active {
+  height: 44px;
+  border-bottom: 0;
+  background-image: -moz-linear-gradient(#7eaf4a, #8ab959);
+  background-image: -webkit-linear-gradient(#7eaf4a, #8ab959);
+  background-image: linear-gradient(#7eaf4a, #8ab959);
+  -moz-box-shadow: inset 0 1px 3px 1px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0 1px 3px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 3px 1px rgba(0, 0, 0, 0.2);
+}
+
+.notetxt {
+  font-size: 10px;
+}
+
+.sameShipRateYes {
+  margin-top: 0px;
+  display: none;
+}
+
+
+
+.flavNameDescBox {
+  background: #F9F9F9;
+  padding: 25px;
+  margin: 150px 0;
+  margin: 0;
+  padding: 20px;
+  margin-right: 1%;
+  margin-top: 1.2%;
+}
+
+.flavNameDescBox h3 {
+  display: inline-block;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.flavNameDescBox h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+fieldset {
+  border: medium none !important;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
+}
+
+
+
+.flavNameDescBox input[type="text"]:hover,
+.flavNameDescBox input[type="email"]:hover,
+.flavNameDescBox input[type="tel"]:hover,
+.flavNameDescBox input[type="url"]:hover,
+.flavNameDescBox textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
+}
+
+.flavNameDescBox textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+.flavNameDescBox .textarea2 {
+  height: 50px!important;
+}
+
+.flavNameDescBox button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4CAF50;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+.flavNameDescBox button[type="submit"]:hover {
+  background: #43A047;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.flavNameDescBox button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.flavNameDescBox input:focus,
+.flavNameDescBox textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+#fldb2,
+#fldb3,
+#fldb4,
+#fldb5,
+#fldb6 {
+  display: none;
+}
+
+.addnewflavorimg {
+  max-width: 188px;
+  height: 345px;
+  position: relative;
+  display: inline-block;
+  float: left;
+  background-color: transparent;
+  border-radius: 14px;
+  border: 2px dashed #c0c0c0!important;
+  cursor: pointer;
+}
+
+.addnewflavorimg img {
+  margin-left: -21px;
+  margin-top: -20px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.addnewflavorimg img:hover {
+  -webkit-filter: none;
+  filter: none;
+  -webkit-animation: hue 3s infinite;
+  animation: hue 3s infinite;
+}
+
+@keyframes hue {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/** responsive design **/
+
+@media(min-width: 950px) {
+  .dropshipformwrap {
+    width: 85%;
+    margin-left: 8.5%;
+  }
+  form > div {
+    display: inline-block;
+  }
+  .col-submit {
+    display: block;
+  }
+  .col-1 .col-2,
+  .col-3,
+  .col-4 {
+    box-shadow: 1px 1px #e4e4e4;
+    border: none;
+  }
+  .col-2 {
+    width: 50%
+  }
+  .col-3 {
+    width: 33.3333333333%
+  }
+  .col-4 {
+    width: 25%
+  }
+  .col-1 {
+    width: 100%
+  }
+  .col-submit button {
+    width: 40%!important;
+    margin: 0 auto;
+  }
+  .sameShipRateYes {
+    margin-top: -60px;
+  }
+}
+
+@media(max-width: 1400px) {
+  .col-4 {
+    width: 33.3333333333%
+  }
+}
+
+@media(max-width: 849px) {
+  .col-4 {
+    width: 50%
+  }
+}
+
+@media(max-width: 849px) {
+  .col-4 {
+    width: 90%
+  }
+}
+
+div[id^="clonedInput"]:first-child .remove{
+  display:none;
+}
+
+
+
+
+
+
+.card {
+  padding: 40px;
+  margin: 30px 0;
+}
+.svg-inline--fa{
+  cursor: pointer;
+}
+
+
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+
+
+.form-group {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-group label {
+  margin-right: 20px;
+}
+
+.radio_btn {
+  margin: 0 10.5rem;
+}
+
+.form-group .input {
+  width: 80%;
+}
+
+#tnum{
+    font-size: 30px;
+}
+
+@media (max-width: 700px) {
+  .form-group {
+    display: block;
+  }
+
+  .radio_btn {
+    margin: 0 .5rem;
+  }
+
+  .form-group .input {
+    width: 100%;
+  }
+  .card {
+    padding: 15px;
+}
+
+.title {
+    font-size: 21px;
+  }
+  #tnum{
+    font-size: 21px;
+}
+
+#tnu{
+    font-size: 21px;  
+}
+}
+
+
+
+@media (max-width: 360px) {
+    
+    .title {
+      font-size: 17px;
+    }
+    #tnum{
+        font-size: 17px;
+    }
+
+    #tnu{
+        font-size: 17px;  
+    }
+  }
+
+@media (min-width: 700px) {
+    .radio_btn {
+      margin: 0 10.5rem 0 3.5rem;
+    }
+  }
+
+
+  @media (min-width: 800px) {
+    .radio_btn {
+      margin: 0 10.5rem 0 4.5rem;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .radio_btn {
+      margin: 0 10.5rem 0 5.5rem;
+    }
+  }
+
+
+  @media (min-width: 950px) {
+    .radio_btn {
+      margin: 0 10.5rem 0 6.5rem;
+    }
+  }
+
+  @media (min-width: 1050px) {
+    .radio_btn {
+      margin: 0 10.5rem 0 7.5rem;
+    }
+  }
+
+  @media (min-width: 1150px) {
+    .radio_btn {
+      margin: 0 10.5rem 0 9.5rem;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .radio_btn {
+      margin: 0 10.5rem 0 11.5rem;
+    }
+  }

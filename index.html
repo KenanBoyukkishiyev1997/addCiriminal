@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>criminal add</title>
+    <link rel="stylesheet" href="./lib/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/card.css">
+    <link rel="stylesheet" href="./css/bootstrap-datepicker.min.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div id="duplicater0" class="clone flavNameDescBox  " style="display: flex;
+        justify-content: space-between;
+        align-items: center;">
+            <h1>Zerer Ceken</h1>
+            <span class="add">+</span>
+        </div>
+            <form id="formy" onsubmit="return false" style="background:transparent; border-color:transparent;">
+
+                <div id="clonedInput" class="clonedInput flavNameDescBox " style="display:block; clear:left;">
+                    <h3>Zerer  Ceken <span class="label-nbr">1</span></h3>
+                    <button style="background: transparent;" class="remove "><span class="add">x</span> </button>
+
+                    <label class="form-group mb-4">
+                        <label for="A.S.A">A.S.A</label>
+                        <input class="category input form-control form-control-solid placeholder-no-fix" id="category1" placeholder="A.S.A" type="text" required>
+                    </label>
+                    <label class="form-group mb-4">
+                        <label class="control-label visible-ie8 visible-ie9" for="Birthday">Doğum günü</label><br>
+                        <input id="datepicker" class="input form-control form-control-solid placeholder-no-fix" type="date" data-val="true" data-val-required="The Doğum Günü field is required." data-date-format="dd/mm/yyyy" name="Birthday" value="">
+                        
+                    </label>
+                    <label>
+                        <label for="">Cinsiyet</label> 
+                        <div class="form-check form-check-inline radio_btn">
+                            <input class=" form-check-input" type="radio" name="inlineRadioOptions"
+                                id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Qadin</label>
+                        </div>
+                        <div class="form-check form-check-inline ">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                value="option2">
+                            <label class="form-check-label" for="inlineRadio2">Kisi</label>
+                        </div>
+                    </label>
+                            
+
+                </div>
+            </form>
+
+
+
+             <div id="duplicater0" class="cloneCinayet flavNameDescBox  " style="display: flex;
+        justify-content: space-between;
+        align-items: center;">
+            <h1>Cinayet</h1>
+            <span class="add">+</span>
+        </div>
+            <form id="formyCinayet" onsubmit="return false" style="background:transparent; border-color:transparent;">
+
+                <div id="clonedInputCinayet" class="clonedInputCinayet flavNameDescBox " style="display:block; clear:left;">
+                    <h3>Cinayet <span class="label-nbrCinayet">1</span></h3>
+                    <button style="background: transparent;" class="remove"><span class="add">x</span> </button>
+
+                    <label class="form-group mb-4">
+                        <label for="A.S.A">A.S.A</label>
+                        <input class="category input form-control form-control-solid placeholder-no-fix" id="category1" placeholder="A.S.A" type="text" required>
+                    </label>
+                    <label class="form-group mb-4">
+                        <label class="control-label visible-ie8 visible-ie9" for="Birthday">Doğum günü</label><br>
+                        <input id="datepicker" class="input form-control form-control-solid placeholder-no-fix" type="date" data-val="true" data-val-required="The Doğum Günü field is required." data-date-format="dd/mm/yyyy" name="Birthday" value="">
+                        
+                    </label>
+                    <label>
+                        Cinsiyet
+                        <div class="form-check form-check-inline radio_btn">
+                            <input class=" form-check-input" type="radio" name="inlineRadioOptions"
+                                id="inlineRadio3" value="option1">
+                            <label class="form-check-label" for="inlineRadio3">Qadin</label>
+                        </div>
+                        <div class="form-check form-check-inline ">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4"
+                                value="option2">
+                            <label class="form-check-label" for="inlineRadio4">Kisi</label>
+                        </div>
+                    </label>
+                            
+
+                </div>
+            </form>
+
+
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/all.min.js"></script>
+    <script src="./lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./js/bootstrap-datepicker.min.js"></script>
+</body>
+
+</html>
